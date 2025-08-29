@@ -76,7 +76,7 @@ background-size: calc(var(--s)/4.667) var(--s),var(--s) calc(var(--s)/4.667);
 }
 
 .pro{
-    font-size: clamp(2rem, calc(7vw+1rem), 3rem);
+    font-size: clamp(2rem, calc(7vw + 1rem), 3rem);
     background: linear-gradient(to right, rgb(115, 115, 214), rgb(195, 43, 226));
     background-clip: text;
     color: transparent;
@@ -139,7 +139,7 @@ background-size: calc(var(--s)/4.667) var(--s),var(--s) calc(var(--s)/4.667);
 
 
 .SVC .card{
-    transform:perspective(700px);
+    transform:perspective(1500px);
     transform-style: preserve-3d;
     /* backface-visibility:hidden; */
     background-color: rgb(70, 15, 107);
@@ -148,12 +148,39 @@ background-size: calc(var(--s)/4.667) var(--s),var(--s) calc(var(--s)/4.667);
     outline-offset: 2px;
     color: #f4f0f1;
     transition: transform 2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    position: relative;
+    height: 12rem;
 }
 
-.SVC .card:hover{
-    transform: rotateY(45deg);
+.SVC .card .card-body{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.SVC .card .card-body:nth-child(2){
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    background-color: rgb(38, 23, 46) !important;
+    background-image: url(../images/360_F_579249537_zYfhzLgEEq5WGXuihLAg62EZR7LV79Xu.webp);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    padding: 1rem !important;
+    border-radius: 0.7rem;
+    position: absolute;
+    top: -0.025rem;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    z-index: 3;
+}
+
+.SVC>div:hover .card{
+    transform: rotateY(165deg);
     background-color: skyblue;
     color: rgb(3,4,43);
+    backface-visibility: hidden;
 }
 
 .hrd{
