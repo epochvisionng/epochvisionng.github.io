@@ -245,6 +245,11 @@ background-size: calc(var(--s)/4.667) var(--s),var(--s) calc(var(--s)/4.667);
     background-blend-mode: overlay;
 }
 
+.partners{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
 @media  screen and (max-width: 768px) {
     .oflw{width: 83% !important; margin: auto;}
     .box{padding:2rem 0px; width: 100% !important;}
